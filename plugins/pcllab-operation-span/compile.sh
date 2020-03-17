@@ -1,0 +1,1 @@
+simplifyify src/plugin.js --outfile plugin.js --debug --watch

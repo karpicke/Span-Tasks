@@ -1,0 +1,18 @@
+{
+    "square_stimuli": [{"cue":"materials/squares/matrix1.bmp","target_row":1,"target_col":1},
+        {"cue":"materials/squares/matrix2.bmp","target_row":1,"target_col":2},
+        {"cue":"materials/squares/matrix3.bmp","target_row":1,"target_col":3},
+        {"cue":"materials/squares/matrix4.bmp","target_row":1,"target_col":4},
+        {"cue":"materials/squares/matrix5.bmp","target_row":2,"target_col":1},
+        {"cue":"materials/squares/matrix6.bmp","target_row":2,"target_col":2},
+        {"cue":"materials/squares/matrix7.bmp","target_row":2,"target_col":3},
+        {"cue":"materials/squares/matrix8.bmp","target_row":2,"target_col":4},
+        {"cue":"materials/squares/matrix9.bmp","target_row":3,"target_col":1},
+        {"cue":"materials/squares/matrix10.bmp","target_row":3,"target_col":2},
+        {"cue":"materials/squares/matrix11.bmp","target_row":3,"target_col":3},
+        {"cue":"materials/squares/matrix12.bmp","target_row":3,"target_col":4},
+        {"cue":"materials/squares/matrix13.bmp","target_row":4,"target_col":1},
+        {"cue":"materials/squares/matrix14.bmp","target_row":4,"target_col":2},
+        {"cue":"materials/squares/matrix15.bmp","target_row":4,"target_col":3},
+        {"cue":"materials/squares/matrix16.bmp","target_row":4,"target_col":4}]
+}

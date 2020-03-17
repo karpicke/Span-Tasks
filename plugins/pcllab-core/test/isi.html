@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    <!-- MDBootstrap -->
+    <link rel="stylesheet" href="/css/mdb.css">
+
+    <link rel="stylesheet" href="../../../css/jspsych.css">
+    <link rel="stylesheet" href="../../../css/pcllab-plugins.css">
+
+    <title>pcllab-core-example</title>
+</head>
+
+<body>
+    <div id="experiment_container" class="container-fluid"></div>
+
+    <!-- SCRIPTS -->
+    <!-- jQuery first, then Bootstrap JS. -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+    <script src="/js/mdb.min.js"></script>
+
+    <!-- Then jsPsych -->
+    <script src="/jspsych.js"></script>
+
+    <!-- Plugins -->
+    <!-- <script src="../../../js/automatedScoring.js"></script> -->
+    <script src="../plugin.js"></script>
+    <script src="/plugins/pcllab-form/plugin.js"></script>
+</body>
+
+<script>
+    const _cue = 'Vim or Emacs'
+    const stop_sign = {
+        type: 'pcllab-form',
+        title: 'Form',
+        questions: [
+            [{
+                question: "How old are you?",
+                name: "age",
+                type: "number"
+            }],
+        ],
+    }
+    const trial1 = {
+        type: 'pcllab-core',
+        timing_post_trial: 250,
+        title: "Cued Recall Experimenter Paced",
+        stimuli: [
+            {
+                response_type: 'study_items',
+                cue: () => { return _cue },
+                target: 'Vim',
+            },
+            {
+                response_type: 'study_items',
+                cue: () => { return _cue },
+                target: 'Vim',
+            },
+            {
+                response_type: 'study_items',
+                cue: () => { return _cue },
+                target: 'Vim',
+            },
+        ],
+        feedback: false,
+        show_i_dont_know: true,
+        minimum_time: 0,
+        show_button: true,
+        isi: 250,
+        input_size: 'small',
+        feedback_html: (data) => {
+            return `<p>${data.pop().response}</p>`
+        },
+        done_callback: (data) => {
+            console.log(data)
+        },
+    }
+
+    jsPsych.init({
+        display_element: $("div#experiment_container"),
+        timeline: [trial1],
+        // timeline: [trial2],
+        on_finish: function () {
+            jsPsych.data.displayData();
+        }
+    })
+
+</script>
+
+</html>

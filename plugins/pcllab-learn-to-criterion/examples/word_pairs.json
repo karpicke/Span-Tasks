@@ -1,0 +1,22 @@
+[
+	{
+		"cue": "word1",
+		"target": "a"
+	},
+	{
+		"cue": "word2",
+		"target": "b"
+	},
+	{
+		"cue": "word3",
+		"target": "c"
+	},
+	{
+		"cue": "word4",
+		"target": "d"
+	},
+	{
+		"cue": "word5",
+		"target": "e"
+	}
+]

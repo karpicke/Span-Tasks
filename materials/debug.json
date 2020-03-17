@@ -1,0 +1,34 @@
+[
+    {
+        "cue": "a",
+        "target": "apple"
+    },
+    {
+        "cue": "b",
+        "target": "ball"
+    },
+    {
+        "cue": "c",
+        "target": "car"
+    },
+    {
+        "cue": "d",
+        "target": "dog"
+    },
+    {
+        "cue": "e",
+        "target": "elephant"
+    },
+    {
+        "cue": "f",
+        "target": "fish"
+    },
+    {
+        "cue": "g",
+        "target": "goat"
+    },
+    {
+        "cue": "h",
+        "target": "house"
+    }
+]

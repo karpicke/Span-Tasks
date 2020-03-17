@@ -1,0 +1,1032 @@
+/* General Stuff */
+
+body,
+html {
+    background-color: #F5F5F5;
+}
+
+#experiment_container {
+    max-width: 1000px;
+    width: 80%;
+    min-width: 400px;
+    min-height: 93vh !important;
+    padding: 30px;
+    margin: 20px auto 20px;
+    border-radius: 0.2em;
+    box-shadow: 0 1rem 5rem rgba( 0, 0, 0, 0.05);
+    background: white;
+}
+
+#jspsych-data-display {
+    padding: 15px;
+    border-radius: 0.5em;
+    background-color: #EEEEEE !important;
+    color: #222222 !important;
+}
+
+.pcllab-text-center {
+    text-align: center;
+}
+
+.pcllab-button-center {
+    position: relative;
+    margin: 0 auto 15px;
+    display: block;
+}
+
+.pcllab-container-center {
+    position: relative;
+    margin: 0 auto 0;
+    display: block;
+    text-align: center;
+}
+
+.pcllab-default-bottom-margin-medium {
+    margin-bottom: 40px;
+}
+
+.pcllab-default-font-larger {
+    font-size: larger;
+}
+
+.pcllab-default-progress {
+    display: none;
+    margin-top: 15px;
+    height: 26px;
+}
+
+.progress {
+    display: none;
+}
+
+.pcllab-default-progressbar {
+    width: 100%;
+}
+
+.pcllab-invisible {
+    visibility: hidden;
+}
+
+/* PCLLAB Ratings Slider */
+
+.pcllab-ratings-slider-instructions {
+    padding-bottom: 7px;
+    text-align: center;
+}
+
+.pcllab-button-container {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.pcllab-ratings-slider-slider {
+    margin: 15px;
+    display: flex;
+    flex-direction: row;
+}
+
+.pcllab-ratings-slider-slider>div {
+    text-align: center;
+    margin: 10px;
+    width: 20%;
+    white-space: pre-wrap;
+}
+
+.pcllab-ratings-slider-slider>input {
+    display: flex;
+    width: 100%;
+}
+
+.pcllab-slider-value {
+    position: absolute;
+    border: 1px solid;
+    padding: 2px;
+    background-color: #2196F3;
+    color: #EEEEEE;
+    margin: -2px;
+    border-bottom-left-radius: 99em;
+    border-bottom-right-radius: 99em;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.pcllab-slider-value::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: -14.5px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 15px 14px 15px;
+    border-color: transparent transparent #2196F3 transparent;
+}
+
+.pcllab-slider-value-container {
+    height: 1px;
+}
+
+.pcllab-ratings-slider-slider input[type=range] {
+    -webkit-appearance: none;
+    outline: none;
+    background: transparent;
+}
+
+.pcllab-ratings-slider-slider input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 25px;
+    width: 25px;
+    border-radius: 99em;
+    background: #2196F3;
+    cursor: pointer;
+    margin-top: -10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px
+}
+
+.pcllab-ratings-slider-slider input[type=range]::-moz-range-thumb {
+    -webkit-appearance: none;
+    height: 25px;
+    width: 25px;
+    border-radius: 99em;
+    background: #2196F3;
+    cursor: pointer;
+    margin-top: -10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px
+}
+
+.pcllab-ratings-slider-slider input[type=range]::-ms-thumb {
+    -webkit-appearance: none;
+    height: 25px;
+    width: 25px;
+    border-radius: 99em;
+    background: #2196F3;
+    cursor: pointer;
+    margin-top: -10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px
+}
+
+.pcllab-ratings-slider-slider input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    background: #3071a9;
+    border-radius: 1.3px;
+    background-color: #4285F4;
+    /* Old browsers */
+}
+
+.pcllab-ratings-slider-slider input[type=range]::-moz-slider-runnable-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    background: #3071a9;
+    border-radius: 1.3px;
+    background-color: #4285F4;
+    /* Old browsers */
+}
+
+.pcllab-ratings-school-slider input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    background: #3071a9;
+    border-radius: 1.3px;
+    background-color: #3F51B5;
+    /* Old browsers */
+    background-image: -moz-linear-gradient(left, #3F51B5 0%, #00BCD4 30%, #EEEEEE 50%, #FF9800 70%, #f44336 100%);
+    /* FF3.6-15 */
+    background-image: -webkit-linear-gradient(left, #3F51B5 0%, #00BCD4 30%, #EEEEEE 50%, #FF9800 70%, #f44336 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background-image: linear-gradient(to right, #3F51B5 0%, #00BCD4 30%, #EEEEEE 50%, #FF9800 70%, #f44336 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.pcllab-ratings-school-slider input[type=range]:focus::-webkit-slider-runnable-track {
+    background-color: #3F51B5;
+    /* Old browsers */
+    background-image: -moz-linear-gradient(left, #3F51B5 0%, #00BCD4 30%, #EEEEEE 50%, #FF9800 70%, #f44336 100%);
+    /* FF3.6-15 */
+    background-image: -webkit-linear-gradient(left, #3F51B5 0%, #00BCD4 30%, #EEEEEE 50%, #FF9800 70%, #f44336 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background-image: linear-gradient(to right, #3F51B5 0%, #00BCD4 30%, #EEEEEE 50%, #FF9800 70%, #f44336 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.pcllab-ratings-school-slider input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    background: #3071a9;
+    border-radius: 1.3px;
+    background-color: #3F51B5;
+    /* Old browsers */
+    background-image: -moz-linear-gradient(left, #3F51B5 0%, #00BCD4 30%, #EEEEEE 50%, #FF9800 70%, #f44336 100%);
+    /* FF3.6-15 */
+    background-image: -webkit-linear-gradient(left, #3F51B5 0%, #00BCD4 30%, #EEEEEE 50%, #FF9800 70%, #f44336 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background-image: linear-gradient(to right, #3F51B5 0%, #00BCD4 30%, #EEEEEE 50%, #FF9800 70%, #f44336 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.pcllab-ratings-school-slider input[type=range]::-ms-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    border-width: 16px 0;
+    color: transparent;
+}
+
+.pcllab-ratings-school-slider input[type=range]::-ms-fill-lower {
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background-color: cornflowerblue;
+}
+
+.pcllab-ratings-school-slider input[type=range]:focus::-ms-fill-lower {
+    background-color: cornflowerblue;
+}
+
+.pcllab-ratings-school-slider input[type=range]::-ms-fill-upper {
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background-color: cornflowerblue;
+}
+
+.pcllab-ratings-school-slider input[type=range]:focus::-ms-fill-upper {
+    background-color: cornflowerblue;
+}
+
+.pcllab-ratings-slider-slider input[type=range]::-ms-tooltip {
+    display: none;
+}
+
+.pcllab-ratings-button {
+    margin-top: 20px;
+}
+
+/* PCLLAB Identify Keywords */
+
+.pcllab-identify-keywords-text {
+    width: 100%;
+    min-height: 450px;
+}
+
+.pcllab-identify-keywords-wordbank-container {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.pcllab-identify-keywords-wordbank {
+    overflow-y: auto;
+    text-align: center;
+}
+
+.pcllab-identify-keywords-wordbank:after {
+    content: attr(rel);
+    position: absolute;
+    top: 22px;
+    left: calc(25% + 30px);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.pcllab-identify-keywords-word {
+    transition: color 0.15s ease;
+}
+
+.pcllab-identify-keywords-word:hover {
+    cursor: pointer;
+    color: #f88;
+}
+
+.pcllab-identify-keywords-word-selected {
+    color: #f00 !important;
+}
+
+/* PCLLAB Short Answer */
+
+.pcllab-short-answer-response-area {
+    padding: 8px;
+    min-width: 40%;
+}
+
+.pcllab-short-answer-continue-btn {
+    margin-right: 15px;
+}
+
+.pcllab-short-answer-question-response-container {
+    width: calc(90% - 160px);
+    float: left;
+}
+
+.pcllab-short-answer-question-response-wordbank-container {
+    clear: both;
+}
+
+.pcllab-short-answer-bank-word-container {
+    min-width: 25%;
+    text-align: center;
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.pcllab-short-answer-bank-word-container>ul {
+    list-style-type: none;
+    padding: 4px;
+    margin: 0;
+}
+
+.pcllab-short-answer-bank-word-container span:hover {
+    color: #f88;
+    cursor: move;
+}
+
+.pcllab-short-answer-bank-word-selected {
+    color: #f00;
+}
+
+/* PCLLAB Order Reconstruction */
+
+.reconstruction-column-container {
+    display: flex;
+}
+
+.reconstruction-column-container>.reconstruction-column,
+.sentence-column-container {
+    display: block;
+    padding: 5px;
+    flex: 7;
+    background-color: #FAFAFA;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.reconstruction-column-container li,
+.sentence-column-container li {
+    padding: 5px;
+    list-style-type: none;
+    text-align: center;
+    background-color: #f3f3f3;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.reconstruction-column-container .sortable-chosen {
+    background-color: #E0E0E0;
+}
+
+.reconstruction-column-container .sortable-ghost {
+    opacity: 0.5;
+    border: 0px;
+    padding: 6px;
+}
+
+.reconstruction-column-container .reconstruction-sorted-value-container {
+    border-bottom: 1px solid #444444;
+    padding: 5px;
+    min-height: 50px;
+    height: auto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.reconstruction-column-container .reconstruction-sorted-value-container>li {
+    cursor: move;
+    font-size: calc(0.7vw + 0.7vh);
+}
+
+.reconstruction-given-values,
+.sentence-sorting {
+    padding: 15px 20px;
+    min-height: 200px;
+}
+
+.reconstruction-given-values>li,
+.sentence-sorting>li {
+    margin: 10px 0px;
+    font-size: calc(0.7vw + 0.7vh);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: move;
+}
+
+.reconstruction-divider {
+    flex: 1;
+}
+
+.reconstruction-sorted-container {
+    flex-direction: row;
+    display: flex;
+}
+
+.reconstruction-sorted-container>p {
+    margin-top: 10px;
+    flex: 1;
+    text-align: center;
+}
+
+.reconstruction-sorted-container>ul {
+    flex: 10;
+}
+
+.reconstruction-placeholder {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.10), 0 3px 6px rgba(0, 0, 0, 0.18);
+    opacity: 0.65;
+}
+
+.reconstruction-column-container .ui-sortable-helper {
+    opacity: 0.75;
+}
+
+.reconstruction-column-container .ui-sortable-handle {
+    display: block !important;
+}
+
+.reconstruction-sorted-value-container li:nth-last-child(2),
+.reconstruction-sorted-value-container li:nth-last-child(2)~li {
+    display: none;
+    background-color: lightyellow;
+}
+
+/* PCLLAB Multi List Sorting */
+
+.multilist-given-values {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 15px 20px;
+    min-height: 40px;
+    width: 100%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    list-style-type: none;
+    background-color: #FAFAFA;
+}
+
+.multilist-given-values li {
+    flex-basis: 24%;
+    margin: 10px 0px;
+}
+
+.multilist-list-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.multilist-list-container>div {
+    text-align: center;
+    width: 100%;
+    padding: 25px;
+}
+
+.multilist-list-container ol {
+    min-height: 100px;
+    padding: 4px;
+    /* list-style-type: none; */
+    background-color: #FAFAFA;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 5px rgba(0, 0, 0, 0.23);
+}
+
+.multilist-given-values>li,
+.multilist-list-container ol>li {
+    list-style-position: inside;
+    text-align: center;
+    background-color: #f3f3f3;
+    margin: 10px 5px 10px 5px;
+    padding: 3px 0px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.26), 0 1px 4px rgba(0, 0, 0, 0.33);
+    border-radius: 5px;
+}
+
+.mulitlist-column .ui-sortable-helper,
+.multilist-list-container .ui-sortable-helper {
+    opacity: 0.75;
+}
+
+.multilist-given-values .ui-sortable-placeholder,
+.multilist-list-container .ui-sortable-placeholder {
+    visibility: visible !important;
+    background-color: lightyellow;
+    display: block;
+}
+
+.multilist-list-container .ui-sortable-placeholder {
+    margin: 10px 5px 10px 5px;
+}
+
+/* PCLLAB Free Recall List */
+
+span.pcllab-free-recall-list-word:hover {
+    cursor: pointer;
+}
+
+.pcllab-free-recall-list-grid-container {
+    width: 90%;
+    margin: 0 5% 60px 5%;
+}
+
+/* PCLLAB Short Answer Text */
+
+.pcllab-sat-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pcllab-sat-container.pcllab-sat-vert {
+    flex-direction: column;
+}
+
+.pcllab-sat-text {
+    flex-basis: 58%;
+    padding: 0px 10px 10px 10px;
+    text-align: center;
+}
+
+.pcllab-sat-vert .pcllab-sat-text {
+    min-height: 150px;
+    max-height: 325px;
+    margin-bottom: 15px;
+}
+
+.pcllab-sat-one-page-text .pcllab-sat-textbox {
+    /*max-height: 100% !important;*/
+}
+
+.pcllab-sat-one-page-title {
+    font-size: 20px !important;
+}
+
+.pcllab-sat-title {
+    font-size: 24px;
+    padding: 10px 0px 15px 0px;
+}
+
+.pcllab-sat-textbox {
+    padding: 10px;
+    /* overflow-y: auto; */
+    border-top: 1px solid #E0E0E0;
+    /*max-height: 300px;*/
+}
+
+.pcllab-sat-question {
+    flex-basis: 38%;
+    padding: 0px 10px 10px 10px;
+    text-align: center;
+    min-height: 250px;
+    max-height: 400px;
+    display: flex;
+    flex-direction: column
+}
+
+.pcllab-sat-vert .pcllab-sat-question {
+    min-height: 150px;
+    max-height: 200px;
+    margin-bottom: 15px;
+    flex-basis: auto;
+}
+
+.pcllab-sat-question textarea {
+    display: flex;
+    border-top: 1px solid #E0E0E0;
+    border-right: 0px solid #E0E0E0;
+    border-bottom: 0px solid #E0E0E0;
+    border-left: 0px solid #E0E0E0;
+    outline: none;
+    resize: none;
+    width: 100%;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    overflow-y: auto;
+    height: 100px;
+}
+
+.pcllab-sat-question textarea:focus {
+    border-top: 1px solid #337AB7;
+}
+
+.pcllab-sat-one-page-question {
+    max-height: 100% !important;
+}
+
+.pcllab-sat-one-page-textbox {
+    max-height: 100px !important;
+}
+
+/* Spatial */
+.pcllab-spatial-container {
+    width: 100% !important;
+    height: 100vh !important;
+    min-width: 100vw !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+}
+
+/* Counting Span */
+
+.pcllab-cs-shape-container {
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+
+.pcllab-cs-numpad-container {
+    width: 80%;
+    margin: 0 10% 60px 10%;
+}
+
+/* Study Items */
+
+.pcllab-study-items-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.pcllab-study-items-container-horz {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.pcllab-study-item {
+    margin: 5px;
+}
+
+img.pcllab-study-item {
+    padding: 5px;
+    object-fit: scale-down;
+    overflow: hidden;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.pcllab-study-item-container {
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    font-size: 30px;
+}
+
+.pcllab-study-item-word {
+    font-size: 45px !important;
+}
+
+/* Sentence Sorting */
+
+.sentence-sort-static {
+    background-color: darkgreen !important;
+    color: white !important;
+    cursor: not-allowed !important;
+}
+
+.sentence-sort-read-only {
+    cursor: not-allowed !important;
+}
+
+/* Multiple Choice */
+
+.pcllab-mc-options {
+    font-size: 18px;
+}
+
+.pcllab-mc-options .checkbox {
+    display: inline;
+}
+
+.pcllab-mc-options .checkbox label {
+    margin-bottom: 6px;
+}
+
+.pcllab-mc-options .checkbox input {
+    margin-right: 7px;
+}
+
+.pcllab-mc-spacing {
+    padding-left: 15px;
+}
+
+/* Math Equation */
+
+.pcllab-math-element {
+    font-size: 36px;
+    margin: 15px;
+    text-align: center;
+}
+
+input.pcllab-math-unanswered {
+    width: 40px;
+    height: 40px;
+    border-color: black;
+    border-width: 0px 0px 2px 0px;
+}
+
+.pcllab-math-feedback-container {
+    margin-top: 50px;
+    width: 75%;
+}
+
+/* Present multimedia */
+
+.pm-video-spacer {
+    min-height: 500px;
+    height: 50vw;
+    max-height: 600px;
+}
+
+.pcllab-pm-container {
+    padding-top: 40px;
+}
+
+.pcllab-pm-container .pcllab-sat-question {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    height: 100px;
+}
+
+.video-js .vjs-playing .vjs-tech {
+    pointer-events: none;
+}
+
+.green-marker-class {
+    width: 7px;
+    border-radius: 0%;
+    background-color: red;
+}
+
+.disable-click {
+    pointer-events: none;
+}
+
+.md-checkbox {
+    position: relative;
+    height: 20px;
+    margin: 16px 0;
+}
+
+.md-checkbox label {
+    cursor: pointer;
+    font-size: 16px;
+    padding-left: 5px;
+}
+
+.md-checkbox label:before,
+.md-checkbox label:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 3px;
+}
+
+.md-checkbox label:before {
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 2px solid rgba(0, 0, 0, 0.54);
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background .3s;
+}
+
+.md-checkbox input[type="checkbox"] {
+    outline: 0;
+    margin-right: 10px;
+}
+
+.md-checkbox input[type="checkbox"]:checked+label:before {
+    background: #3F51B5;
+    border: none;
+}
+
+.md-checkbox input[type="checkbox"]:checked+label:after {
+    transform: rotate(-45deg);
+    top: 8px;
+    left: 4px;
+    width: 12px;
+    height: 6px;
+    border: 2px solid #fff;
+    border-top-style: none;
+    border-right-style: none;
+}
+
+@keyframes ripple {
+    0% {
+        box-shadow: 0px 0px 0px 1px transparent;
+    }
+    50% {
+        box-shadow: 0px 0px 0px 15px rgba(0, 0, 0, 0.1);
+    }
+    100% {
+        box-shadow: 0px 0px 0px 15px transparent;
+    }
+}
+
+.md-radio {
+    margin: 16px 0;
+}
+
+.md-radio.md-radio-inline {
+    display: inline-block;
+}
+
+.md-radio input[type="radio"] {
+    display: none;
+}
+
+.md-radio input[type="radio"]:checked+label:before {
+    border-color: #3F51B5;
+    animation: ripple 0.2s linear forwards;
+}
+
+.md-radio input[type="radio"]:checked+label:after {
+    transform: scale(1);
+}
+
+.md-radio label {
+    display: inline-block;
+    height: 20px;
+    position: relative;
+    font-size: 16px;
+    padding-left: 5px;
+    padding: 0 30px;
+    margin-bottom: 0;
+    cursor: pointer;
+    vertical-align: bottom;
+}
+
+.md-radio label:before,
+.md-radio label:after {
+    position: absolute;
+    content: '';
+    border-radius: 50%;
+    transition: all .3s ease;
+    transition-property: transform, border-color;
+}
+
+.md-radio label:before {
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(0, 0, 0, 0.54);
+}
+
+.md-radio label:after {
+    top: 5px;
+    left: 5px;
+    width: 10px;
+    height: 10px;
+    transform: scale(0);
+    background: #3F51B5;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+/* pcllab-form plugin */
+
+.pcllab-form .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.pcllab-form input {
+    margin-right: 3px;
+}
+
+#accept_terms {
+    display: none !important;
+}
+
+/* PCCLAB Cued Recall */
+
+.pcllab-hp-input {
+    display: none !important;
+    position: absolute;
+}
+
+.pcllab-cued-recall-xlarge-input {
+    border-radius: 0.1rem !important;
+    padding: 0.5rem !important;
+    border-color: #E3E3E3;
+    color: #757575 !important;
+    transition: border-color 100ms ease-in-out;
+}
+
+.pcllab-cued-recall-xlarge-input:focus {
+    border-color: #2196F3;
+}
+
+/**
+ * Progress Bar
+ *
+ * https://stackoverflow.com/questions/31109581/javascript-timer-progress-bar
+ * https://codepen.io/holdencreative/pen/vEVbwv
+ */
+
+.progress {
+    position: relative;
+    height: 5px;
+    display: block;
+    width: 100%;
+    background-color: #9acffa;
+    border-radius: 2px;
+    background-clip: padding-box;
+    margin: 0.5rem 0 1rem 0;
+    overflow: hidden;
+}
+
+.progress .determinate {
+    position: absolute;
+    background-color: inherit;
+    top: 0;
+    bottom: 0;
+    background-color: #2196F3;
+    animation: progressbar-countdown;
+    /* Placeholder, this will be updated using javascript */
+    animation-duration: 40s;
+    /* We stop in the end */
+    animation-iteration-count: 1;
+    /* Stay on pause when the animation is finished finished */
+    animation-fill-mode: forwards;
+    /* We start paused, we start the animation using javascript */
+    animation-play-state: paused;
+    /* We want a linear animation, ease-out is standard */
+    animation-timing-function: linear;
+}
+
+.progress .determinate.reverse {
+    animation: progressbar-countdown-reverse;
+}
+
+@keyframes progressbar-countdown {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes progressbar-countdown-reverse {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 0%;
+    }
+}
+
+/* Dragula */
+
+.gu-mirror {
+    position: fixed !important;
+    margin: 0 !important;
+    z-index: 9999 !important;
+    opacity: .8;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    filter: alpha(opacity=80)
+}
+
+.gu-hide {
+    display: none !important
+}
+
+.gu-unselectable {
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important
+}
+
+.gu-transit {
+    opacity: .2;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+    filter: alpha(opacity=20)
+}

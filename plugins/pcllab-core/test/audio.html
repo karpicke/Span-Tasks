@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    <!-- MDBootstrap -->
+    <link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
+    <link rel="stylesheet" href="/css/mdb.css">
+
+    <link rel="stylesheet" href="../../../css/jspsych.css">
+    <link rel="stylesheet" href="../../../css/pcllab-plugins.css">
+
+    <title>pcllab-core-example</title>
+</head>
+
+<body>
+    <div id="experiment_container" class="container-fluid"></div>
+
+    <!-- SCRIPTS -->
+    <!-- jQuery first, then Bootstrap JS. -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+    <script src="/js/mdb.min.js"></script>
+
+    <!-- Then jsPsych -->
+    <script src="../../../jspsych.js"></script>
+
+    <!-- Plugins -->
+    <script src="../../../js/automatedScoring.js"></script>
+    <script src="../plugin.js"></script>
+</body>
+
+<script>
+    const trial1 = {
+        type: 'pcllab-core',
+        title: "Cued Recall Experimenter Paced",
+        stimuli: [
+            {
+                response_type: 'button',
+                buttons: ['yes', 'no'],
+                cue: 'Placeholder cue',
+                audio_file: 'spongebob.mp3'
+            },
+        ],
+        input_size: 'small', // small, large, medium, xlarge
+        show_button: false,
+        show_repeat: true,
+        show_repeat_minimum_time: 3000,
+        show_progress: true,
+        response_count: 0,
+        progress_total_time: true
+    };
+
+    jsPsych.init({
+        display_element: $("div#experiment_container"),
+        timeline: [trial1],
+        // timeline: [trial2],
+        on_finish: function () {
+            jsPsych.data.displayData();
+        }
+    })
+
+</script>
+
+</html>

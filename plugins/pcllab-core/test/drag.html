@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.css" />
+    <!-- MDBootstrap -->
+    <link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
+    <link rel="stylesheet" href="/css/mdb.css">
+
+    <link rel="stylesheet" href="../../../css/jspsych.css">
+    <link rel="stylesheet" href="../../../css/pcllab-plugins.css">
+
+    <title>pcllab-core-example</title>
+</head>
+
+<body>
+    <div id="experiment_container" class="container">
+        <div class="row blue" id="top">
+            <div class="col-4">word1</div>
+            <div class="col-4">word2</div>
+            <div class="col-4">word3</div>
+            <div class="col-4">word4</div>
+            <div class="col-4">word5</div>
+            <div class="col-4">word6</div>
+            <div class="col-4">word7</div>
+        </div>
+
+        <div class="row pt-4 pb-4 red" id="bottom"></div>
+
+        <div class="row mt-4 md-form">
+            <input type="text" id="tb" class="w-100">
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <!-- jQuery first, then Bootstrap JS. -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.2/js/mdb.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js"></script>
+
+    <script>
+        // dragula([$('#top'), $('#bottom')])
+        drake = dragula()
+        drake.containers.push($('#top')[0])
+        drake.containers.push($('#bottom')[0])
+
+        const $row = $('<div>', { class: 'row pt-4 pb-4 green', id: 'bottom2' })
+        $('#experiment_container').append($row)
+
+        drake.containers.push($row[0])
+        drake.containers.push($('#tb'))
+
+        function callback1() {
+            console.log("cb1")
+        }
+        function callback2() {
+            console.log("cb2")
+        }
+
+        drake.on('dragend', callback1)
+        drake.on('dragend', callback2)
+    </script>
+</body>
+
+
+</html>

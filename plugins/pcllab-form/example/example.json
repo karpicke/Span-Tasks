@@ -1,0 +1,58 @@
+[
+  [
+    {
+      "question": "How <b>old</b> are you?",
+      "name": "age",
+      "type": "number"
+    },
+    {
+      "question": "What is your name?",
+      "name": "name",
+      "type": "text",
+      "required": true
+    },
+    {
+      "question": "What year were you born?",
+      "name": "birthdate",
+      "type": "date"
+    }
+  ],
+  [{
+    "question": "What level of education do you have?",
+    "name": "education",
+    "type": "radio",
+    "options": [
+      "Less than high school",
+      "High School/GED",
+      "Undergraduate",
+      "Graduate",
+      "PhD"
+    ]
+  },
+  {
+    "question": "How would you learn something",
+    "type": "checkbox",
+    "name": "learning",
+    "options": [
+      {
+        "label": "I would draw it out",
+        "value": "v"
+      },
+      {
+        "label": "I would read it",
+        "value": "r"
+      }
+    ]
+  },
+  {
+    "question": "Please select all that apply",
+    "type": "checkbox",
+    "name": "options",
+    "optional": true,
+    "options": [
+      "Option 1",
+      "Option 2",
+      "Option 3"
+    ]
+  }]
+]

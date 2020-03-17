@@ -1,0 +1,12 @@
+[
+	{
+		"target": "word1"
+	},
+	{
+		"target": "word2",
+		"time": "500"
+	},
+	{
+		"target": "word3"
+	}
+]

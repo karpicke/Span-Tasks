@@ -1,0 +1,62 @@
+{
+    "symmetry_stimuli": [{
+        "cue": "materials/pracsymm/pracsymm1.bmp",
+        "target": true
+    },
+    {
+        "cue": "materials/pracsymm/pracsymm2.bmp",
+        "target": true
+    },
+    {
+        "cue": "materials/pracsymm/pracsymm3.bmp",
+        "target": true
+    },
+    {
+        "cue": "materials/pracsymm/pracsymm4.bmp",
+        "target": true
+    },
+    {
+        "cue": "materials/pracsymm/pracsymm5.bmp",
+        "target": true
+    },
+    {
+        "cue": "materials/pracsymm/pracsymm6.bmp",
+        "target": true
+    },
+    {
+        "cue": "materials/pracsymm/pracsymm7.bmp",
+        "target": true
+    },
+    {
+        "cue": "materials/pracsymm/pracsymm8.bmp",
+        "target": false
+    },
+    {
+        "cue": "materials/pracsymm/pracsymm9.bmp",
+        "target": false
+    },
+    {
+        "cue": "materials/pracsymm/pracsymm10.bmp",
+        "target": false
+    },
+    {
+        "cue": "materials/pracsymm/pracsymm11.bmp",
+        "target": false
+    },
+    {
+        "cue": "materials/pracsymm/pracsymm12.bmp",
+        "target": false
+    },
+    {
+        "cue": "materials/pracsymm/pracsymm13.bmp",
+        "target": false
+    },
+    {
+        "cue": "materials/pracsymm/pracsymm14.bmp",
+        "target": false
+    },
+    {
+        "cue": "materials/pracsymm/pracsymm15.bmp",
+        "target": false
+    }]
+}

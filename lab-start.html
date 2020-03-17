@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mdb.css">
+    <link rel="stylesheet" href="css/jspsych.css">
+    <link rel="stylesheet" href="css/pcllab-plugins.css">
+
+    <title>Span Tasks</title>
+</head>
+
+<body>
+    <div id="experiment_container" class="container-fluid">
+        <h2 class="pcllab-text-center pcllab-default-bottom-margin-medium">Span Tasks</h2>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div class="card">
+                    <h4 class="card-header indigo white-text">Enter Subject Information</h3>
+                        <div class="card-body">
+                            <form class="form-horizontal" id="subject-form" method="get" action="verify.html"></form>
+                        </div>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
+
+    <script>
+        // Change this per experiment
+        const formfields = {
+            workerId: {
+                type: "input",
+                label: "Subject Number",
+                placeholder: "e.g. 1234"
+            },
+            session: {
+                type: "select",
+                label: "Session",
+                options: ["Both", "Ospan", "Sspan"]
+            },
+            // cbOrder: {
+            //     type: "select",
+            //     label: "Counterbalancing Order",
+            //     options: ["A", "B"]
+            // },
+            // condition: {
+            //     type: "select",
+            //     label: "Condition",
+            //     options: ["Retrieval", "Study", "Recall"]
+            // }
+        }
+        const $form = $('#subject-form')
+
+        // Render form fields
+        for (const key in formfields) {
+            const fieldOptions = formfields[key]
+            const $formGroup = $('<div>', { class: 'form-group' })
+
+            if (fieldOptions.label) {
+                $formGroup.append($(`<span for="${key}" class="control-label">${fieldOptions.label}</span>`))
+            }
+
+            switch (fieldOptions.type) {
+                case "input": {
+                    let placeholder = fieldOptions.placeholder ? fieldOptions.placeholder : ''
+                    const $input = $(`<input type="text" class="form-control" id="${key}" name="${key}"
+                    placeholder="${placeholder}" required>`)
+                    $input.appendTo($formGroup)
+                    $formGroup.addClass('md-form').addClass('md-outline')
+                    break
+                }
+                case "select": {
+                    const $select = $(`<select class="browser-default custom-select" name="${key}"></select>`)
+                    fieldOptions.options.forEach(option => {
+                        $select.append($(`<option value="${option}">${option}</option>`))
+                    })
+                    $select.appendTo($formGroup)
+                    break
+                }
+            }
+            $formGroup.appendTo($form)
+        }
+
+        // Render submit button
+        const $buttonContainer = $('<div>', { class: 'w-100 text-center' })
+        $buttonContainer.appendTo($form)
+        const $button = $('<button>', { class: 'btn btn-primary btn-lg ml-auto mt-4', text: 'Start', type: 'submit' })
+        $button.appendTo($buttonContainer)
+    </script>
+</body>
+
+</html>

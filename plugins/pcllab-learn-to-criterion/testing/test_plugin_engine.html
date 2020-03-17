@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags always come first -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+	<base href="../../../" target="_blank">
+
+	<!-- Bootstrap core CSS -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Material Design Bootstrap -->
+	<link href="css/mdb.css" rel="stylesheet">
+
+	<!-- Plugins -->
+	<link rel="stylesheet" href="plugins/pcllab-learn-to-criterion/plugin.css"></link>
+
+	<link rel="stylesheet" href="css/jspsych.css">
+	<link rel="stylesheet" href="css/pcllab-plugins.css">
+
+	<title>pcllab-learn-to-criterion test</title>
+</head>
+
+<body>
+	<div id="experiment_container" class="container-fluid"></div>
+
+	<!-- Scripts go here -->
+	<!-- JQuery -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- Bootstrap tooltips -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+	<!-- Bootstrap core JavaScript -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<!-- MDB core JavaScript -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
+
+	<!-- Then jsPsych -->
+	<script src="jspsych.js"></script>
+
+	<!-- Plugins -->
+	<script src="plugins/pcllab-learn-to-criterion/plugin.js"></script>
+</body>
+
+<script>
+
+	$('#experiment_container').css({ padding: 0, 'padding-top': '15px' })
+
+	/* Instructions */
+	const instructions = {
+		type: 'pcllab-instructions',
+		label: 'label1',
+		url: 'plugins/pcllab-learn-to-criterion/examples/instructions.json'
+	}
+
+	/* Stop Sign */
+	const ss_nested = {
+		type: 'pcllab-stop-sign',
+		title: 'Please wait for instructions.',
+		minimum_time: 1000
+	}
+
+	const ss_nested_success = (trial_data) => {
+		const rand = Math.random()
+		const isSuccessful = rand >= 0.5 ? true : false
+		console.log('ss_nested_success', isSuccessful, rand)
+		console.log(trial_data)
+		return isSuccessful
+	}
+
+	/* Short Answer Text*/
+	const sa_nested = {
+		type: 'pcllab-short-answer-text',
+		title: 'Example Short Answer Text',
+		text_title: "Rivers",
+		text: "This is the text.",
+		question: ["Question 1", "Quesiton Two", "Question Three", "Question Four", "Question Five"],
+		minimum_time: 1000,
+		one_page: false,
+		show_I_dont_know: true,
+		force_advance: true
+	}
+
+	const sa_nested_success = (trial_data) => {
+		const rand = Math.random()
+		const isSuccessful = rand >= 0.5 ? true : false
+		console.log('sa_nested_success', isSuccessful, rand)
+		console.log(trial_data)
+		return isSuccessful
+	}
+
+	/* Counting Span */
+	const cs_nested = {
+		type: 'pcllab-counting-span',
+		min_list_length: 1,
+		max_list_length: 1,
+		num_cycles: 1,
+		display_order: 'random',
+		show_feedback: true,
+		min_num_targets: 4,
+		max_num_targets: 9,
+		min_num_circle_distractors: 2,
+		max_num_circle_distractors: 10,
+		min_num_square_distractors: 2,
+		max_num_square_distractors: 10,
+	}
+
+	const cs_nested_success = (trial_data) => {
+		const rand = Math.random()
+		const isSuccessful = rand >= 0.5 ? true : false
+		console.log('cs_nested_success', isSuccessful, rand)
+		console.log(trial_data)
+		return isSuccessful
+	}
+
+	/* Concept Map */
+	const cm_nested = {
+		type: 'pcllab-conceptmap',
+		title: "Word List",
+		wordlist: ["This", "example", "shows", "a", "word", "list", "and", "editing", "features.", "Words", "can", "also",
+			"be", "shuffled", "with", "trial.shuffle=true", "Click", "done", "for", "the", "text", "example"],
+		shuffle: false,
+		linkText: true,
+		minimum_time: 5000,
+		background_color: '#EEEEEE',
+		node_color: "#4CAF50",
+		node_fontsize: 16,
+		selected_color: "#2196F3",
+		edit_stroke_color: "#FF5722",
+		multiselect: true
+	}
+
+	const cm_nested_success = (trial_data) => {
+		console.log('cm_nested_success')
+		console.log(trial_data)
+		return true
+	}
+
+	const hookCallback = (hookAPI) => {
+		hookAPI.onTrialStart((data) => {
+			trialIndex = hookAPI.getTrialIndex()
+			prev_trial = hookAPI.getTrialFromIndex(trialIndex - 1)
+			if (prev_trial) {
+				console.log('prev trial result', prev_trial.result, prev_trial.trial.type)
+			}
+		})
+	}
+
+	const test_multi_trial = {
+		mode: 'ltc_plugins',
+		type: 'pcllab-learn-to-criterion',
+		randomize: true,
+		isi_time: 50,
+		max_attempts: -1,
+		instructions: instructions,
+		trial_list: [
+			{ trial: cs_nested, success: cs_nested_success },
+			{ trial: ss_nested, success: ss_nested_success },
+			{ trial: sa_nested, success: sa_nested_success }
+		],
+		hook: hookCallback
+	}
+
+	jsPsych.init({
+		timeline: [test_multi_trial],
+		display_element: $("div#experiment_container"),
+		on_finish: function () {
+			jsPsych.data.displayData()
+		}
+	})
+
+</script>
+
+</html>

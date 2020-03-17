@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <base href="../../../" target="_blank">
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.css" rel="stylesheet">
+
+    <!-- Plugins -->
+    <link rel="stylesheet" href="plugins/pcllab-learn-to-criterion/plugin.css">
+    </link>
+
+    <link rel="stylesheet" href="css/jspsych.css">
+    <link rel="stylesheet" href="css/pcllab-plugins.css">
+
+    <title>pcllab-learn-to-criterion example</title>
+</head>
+
+<body>
+    <div id="experiment_container" class="container-fluid"></div>
+
+    <!-- Scripts go here -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
+
+    <!-- Then jsPsych -->
+    <script src="jspsych.js"></script>
+
+    <!-- Plugins -->
+    <script src="plugins/pcllab-learn-to-criterion/plugin.js"></script>
+</body>
+
+<script>
+    jsPsych.init({
+        display_element: $("div#experiment_container"),
+        timeline: [{
+            type: 'pcllab-learn-to-criterion',
+            title: 'Learn To Criterion Word Pairs',
+            mode: 'word_pairs',
+            max_study_time: 1000,
+            max_recall_time: 3000,
+            max_attempts: 3,
+            isi_time: 250,
+            show_progress: true,
+            word_list_url: 'plugins/pcllab-learn-to-criterion/examples/word_pairs.json',
+            study_instructions: "Study the words that appear on the screen",
+            recall_instructions: "Recall the words that appeared on the screen",
+            user_timing: false,
+            randomize: true,
+        }],
+        on_finish: function () {
+            jsPsych.data.displayData()
+        }
+    })
+
+</script>
+
+</html>

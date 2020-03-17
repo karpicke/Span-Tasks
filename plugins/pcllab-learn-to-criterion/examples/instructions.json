@@ -1,0 +1,12 @@
+{
+    "label1": [
+        {
+            "title": "Instructions",
+            "text": "<p>Throughout the experiment, you will see a progress bar at the top of the screen to show you which phase of the experiment you are in.<br><br>In addition, you will see progress timers at the bottom of the screens that will show you how much time you have left in each phase before you can advance to the next phase.</p><p>At the end of the experiment, there will be a few final questions for you to answer. You will then receive your code to enter into MTurk.</p><p>Please do not write anything down, do not click the back button on your browser, and do not open other tabs or browsers during the experiment.</p><p>Thank you for your participation! Click 'Continue' when you are ready to start the experiment.</p>"
+        },
+        {
+            "title": "Instructions",
+            "text": "<br>Throughout the experiment, you will see a progress bar at the top of the screen to show you which phase of the experiment you are in.<br><br>In addition, you will see progress timers at the bottom of the screens that will show you how much time you have left in each phase before you can advance to the next phase.<br><br>At the end of the experiment, there will be a few final questions for you to answer. You will then receive your code to enter into MTurk.<br><br>Please do not write anything down, do not click the back button on your browser, and do not open other tabs or browsers during the experiment.<br><br>Thank you for your participation! Click 'Continue' when you are ready to start the experiment."
+        }
+    ]
+}

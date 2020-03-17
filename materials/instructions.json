@@ -1,0 +1,95 @@
+{
+    "look-up": {
+        "title": "Look Up",
+        "text": "<h4 style=\"text-align: center\">Please look up at the experimenter for further instructions.</h4>"
+    },
+
+    "session-1-start": {
+        "title": "Instructions",
+        "text": "<p>In this experiment, you will be learning a list of 24 Swahili vocabulary words and their English translations. The experiment consists of a series of Study and Recall periods. During a Study period, you will see the Swahili words and their English translations below them. Each Swahili-English word pair will be shown to you one at a time on the computer screen, and your job will be to study each word pair.</p> <p>During a Recall period, you will see the Swahili words (shown one at a time) with a response box below them, and your job will be to type in the correct English translation for each Swahili word. You will have 8 seconds to type in the correct word, and when that time is up the computer will automatically move on to the next trial (so you do not need to press the Enter key).</p> <p>After the Recall period, you will study the list of word pairs again in another Study period, and then recall the word pairs again in another Recall period, and so on (Study-Recall-Study-Recall-Study-Recall... etc.). You will continue studying and recalling the word pairs until you have recalled all 24 word pairs one time. Once you have recalled a pair correctly, the computer program will tell you that you are correct.</p> <br> <p style=\"text-align: center\">Thank you for participating! Click Begin when you are ready to begin the learning phase.</p>"
+    },
+
+    "repetition-1-start": {
+        "title": "Instructions",
+        "text": "<p>In the next part of the experiment, you will go through the list of word pairs two more times. For some words, you will see the Swahili and English word on the screen. For other words, you will see the Swahili word and a blank below it, and your job will be to recall the English translation. The purpose of this is to have you <b>practice recalling</b> the word pairs. Your job is to try to recall those words each time you go through the list.</p> <br> <p style=\"text-align: center\">Click Begin when you are ready to begin.</p>"
+    },
+
+    "repetition-2-start": {
+        "title": "",
+        "text": "<p style=\"text-align: center\">Click Continue to begin the second cycle through the list.</p>"
+    },
+
+    "session-2-start": {
+        "title": "Session 2 Instructions",
+        "text": "<p>In the first part of the experiment you will be taking a final test over the words you learned two days ago. We don't expect you to be able to recall all the words, but please try to do the best that you can. The test will be the same format as the recall test you took two days ago. You will see a Swahili word and a response box below it. Your job is to recall and type the correct English translation word for each Swahili word. On this test you will have 12 seconds to try to recall each word. When that time is up the computer will automatically move on to the next trial, so you do not need to press the Enter key. The computer will not tell you whether you are correct on this test.</p> <br> <p style=\"text-align: center\">Click Begin when you are ready to begin.</p>"
+    },
+
+    "practice-letters": {
+        "title": "Instructions: Practice Letters",
+        "text": "<p>In this task, you will try to memorize letters you see on the screen while you also solve simple math problems. In the next few minutes, you will have some practice to get you familiar with how the whole task works. We will begin by practicing the letter part of the experiment.</p> <p>For this practice set, letters will appear on the screen one at a time. Try to remember each letter in the order presented. After 2 letters have been shown, you will see a response pad with 12 possible letters. Your job is to click on each letter in the order presented. The letters you click on will appear at the top of the response pad.</p> <p>When you have selected all the letters, and they are in the correct order, click the Continue button at the bottom of the screen. If you make a mistake, click the Delete button. If you forget one of the letters, click the Blank button to mark the spot for the missing letter. Remember, it is very important to get the letters in the same order as you see them. If you forget one, use the Blank button to mark the position.</p> <br> <p style=\"text-align: center\">Click Begin when you are ready to begin</p>"
+    },
+
+    "practice-math": {
+        "title": "Instructions: Practice Math",
+        "text": "<p>Now you will practice doing the math part of the experiment. A math problem will appear on the screen, like this:</p> <p style=\"text-align: center\">(2 X 1) + 1 = ?</p> <p>As soon as you see the math problem, you should compute the correct answer. In the above problem, the answer 3 is correct. When you know the correct answer, you will click the mouse button.</p> <p>You will see a number displayed on the next screen, along with a TRUE button and FALSE button. If the number on the screen is the correct answer to the math problem, click the TRUE button. If the number is not the correct answer, click the FALSE button. For example, if you see the problem</p> <p style=\"text-align: center\">(2 x 2) + 1 = ?</p> <p>and the number on the following screen is 5, click the TRUE button, because the answer is correct. If you see the problem</p> <p style=\"text-align: center\">(2 x 2) + 1 =  ?</p> <p>and the number on the next screen is 6, click the FALSE button, because the correct answer is 5, not 6. After you click one of the buttons, the computer will tell you if you made the right choice.</p> <p>It is VERY important that you get the math problems correct. It is also important that you try to solve the problem as quickly as you can. Do you have any questions? </p> <br> <p style=\"text-align: center\">Click Begin when you are ready to begin</p>"
+    },
+
+    "practice-ospan": {
+        "title": "Instructions: Practice Ospan",
+        "text": "<p>Now you will practice doing both parts of the experiment - the math task and the letter task - at the same time.</p> <p>In the next practice phase, you will be given one of the math problems. Once you make your decision about the math problem, a letter will appear on the screen. Try and remember the letter. After the letter goes away, another math problem will appear, and then another letter. At the end of each list of math problems and letters, a recall screen will appear. Your job is to click on the letters you just saw in the order they were presented.</p> <p>It is important to work quickly and accurately on the math problems. In the previous phase where you only solved math problems, the computer computed your average time to solve the problems. If you take substantially longer than your average time, the computer will automatically move on to the letter and will count that problem as a math error. Therefore it is <b>very important</b> to solve the problems as <b>quickly</b> and as <b>accurately</b> as possible.</p> <p>After the recall screen, you will be given feedback about your performance. You will see the number of letters you recalled and the number of math problems you got correct. You will also see a percentage that indicates your overall accuracy on the math problems throughout the entire phase. It is <b>very important</b> for you to keep this at least at 85%. For our purposes, we can only use data where the participant was at least 85% accurate on the math. Therefore, try to perform at least at 85% on the math problems <b>while also doing your best</b> to recall as many letters as possible.</p> <p style=\"text-align: center\">Do you have any questions? If so, ask the experimenter now.</p> <p style=\"text-align: center\">Click Begin when you are ready to begin</p>"
+    },
+
+    "actual-ospan": {
+        "title": "Instructions: Ospan",
+        "text": "<p>This is the end of the practice. The real trials will look like the practice trials you just completed.</p> <p>First you will get a math problem to solve, then a letter to remember. When you see the recall screen, click on the letters in the order presented. If you forget a letter, click the Blank button to mark where it should go.</p> <p>Some lists will have more math problems and letters than others. It is important that you do your best on both the math problems and the letter recall parts of this experiment. Remember on the math you must work as <b>quickly</b> and <b>accurately</b> as possible. Also, remember to keep your math accuracy at 85% or above.</p> <p>Do you have any questions? If so, please ask the experimenter now.</p> <br> <p style=\"text-align: center\">Click Begin when you are ready to begin</p>"
+    },
+
+    "practice-squares": {
+        "title": "Instructions: Practice Squares",
+        "text": "<p>In this task, you will try to memorize the position of colored squares you see on the screen while you also make judgments about other pictures. In the next few minutes, you will have some practice to get you familiar with how the whole task works. We will begin by practicing the \"square\" part of the task.</p> <p>For this practice set, squares will appear on the screen one at a time. Try to remember where each square was, in the order it was presented in. After 2 squares have been shown, you will see a grid of the 16 possible places the squares could have been. Your job is to select each square in the order presented. To do this, use the mouse to select the appropriate boxes. The squares you select will turn red.</p> <p>When you have selected all the squares, and they are in the correct order, click the Continue button at the bottom of the screen. If you make a mistake, click the Delete button. If you forget one of the squares, click the Blank button to mark the spot for the missing square. Remember, it is very important to get the squares in the same order as you see them. If you forget one, use the Blank button to mark the position.</p> <br> <p style=\"text-align: center\">Do you have any questions? If so, ask the experimenter now.</p> <p style=\"text-align: center\">Click Begin when you are ready to begin</p>"
+    },
+
+    "practice-symmetry-1": {
+        "title": "Instructions: Practice Symmetry",
+        "text": "<p>Now you will practice doing the symmetry part of the experiment. A picture will appear on the screen, and you will have to decide if it is <b>symmetrical</b>. A picture is symmetrical if you can fold it in half vertically and the picture on the left lines up with the picture on the right. On the next screen you will see a picture that <b>is symmetrical</b>.</p>"
+    },
+
+    "practice-example-1": {
+        "title": "",
+        "image": "materials/examplesymm/example_symm1.bmp",
+        "text": "<p>Notice that this picture is symmetrical about the red line. In the pictures you see in this task, the red line will not be present.</p>"
+    },
+
+    "practice-example-2": {
+        "title": "",
+        "image": "materials/examplesymm/example_symm2.bmp",
+        "text": "<p>Here, the picture is <b>not</b> symmetrical. If you folded this across the red line, the boxes would not line up.</p>"
+    },
+
+    "practice-example-3": {
+        "title": "",
+        "image": "materials/examplesymm/example_symm3.bmp",
+        "text": "<p>This is another example of a picture that <b>is symmetrical</b>. If you folded it vertically, the two sides would line up.</p>"
+    },
+
+    "practice-example-4": {
+        "title": "",
+        "image": "materials/examplesymm/example_symm4.bmp",
+        "text": "<p>Here is another example of a picture that is <b>not</b> symmetrical. Notice that if folded, the two sides would not line up.</p> "
+    },
+
+    "practice-symmetry-2": {
+        "title": "",
+        "text": "<p>Once you have decided whether a picture is symmetrical, you will click the Continue button. On screen after that, click the Yes button if the picture was symmetrical or click the No button if it was not symmetrical. After you make your answer, the computer will tell you if you were correct or incorrect.</p> <p>It is <b>very important</b> that you get the symmetry problems correct. It is also important that you try to solve the problems as quickly as you can.</p> <br> <p style=\"text-align: center\">Do you have any questions? If so, ask the experimenter now.</p> <p style=\"text-align: center\">Click Begin when you are ready to begin</p>"
+    },
+
+    "practice-sspan": {
+        "title": "Instructions: Practice Both",
+        "text": "<p>Now you will practice doing both parts of the experiment - the square task and the symmetry task - at the same time.</p> <p>In the next practice phase, you will be given one of the symmetry problems. Once you make your decision about the picture, a square will appear on the screen. Try and remember the position of the square. After the square goes away, another symmetry problem will appear, and then another square. At the end of each list of pictures and squares, a recall screen will appear. Your job is to click on the squares you just saw in the order they were presented.</p> <p>It is important to work quickly and accurately on the symmetry problems. In the previous phase where you only decided about the picture symmetry, the computer computed your average time to solve the problems. If you take substantially longer than your average time, the computer will automatically move on to the square and will count that problem as a symmetry error. Therefore it is <b>very important</b> to solve the symmetry problems as <b>quickly</b> and as <b>accurately</b> as possible.</p> <p> After the square recall screen, you will be given feedback about your performance. You will be told the number of squares you recalled correctly and the number of symmetry problems you got correct. You will also see a percentage that indicates your overall accuracy on the symmetry problems throughout this entire phase. It is <b>very important</b> for you to keep this at least at 85%. For our purposes, we can only use your data if you are at least 85% accurate on the symmetry problems. Therefore, try to perform at least 85% on the symmetry problems <b>while also doing your best</b> to recall as many squares as possible.</p> <br> <p style=\"text-align: center\">Do you have any questions? If so, ask the experimenter now.</p> <p style=\"text-align: center\">Click Begin when you are ready to begin</p>"
+    },
+
+    "actual-sspan": {
+        "title": "Instructions: Sspan",
+        "text": "<p>That is the end of the practice phase. The real trials will look like the practice trials you just completed.</p> <p>First you will get a symmetry problem to solve, then a square. When you see the recall screen, click on the squares in the order they were presented. If you forget a square, click the Blank buton to mark where it should go.</p> <p>Some lists will have more symmetry problems and squares than others. It is important to do your best on both the symmetry problems and the square recall parts of this experiment. Remember on the symmetry problems you must work as <b>quickly</b> and <b>accurately</b> as possible. Also, remember to keep your symmetry accuracy at 85% or above.</p> <br> <p style=\"text-align: center\">Do you have any questions? If so, ask the experimenter now.</p> <p style=\"text-align: center\">Click Begin when you are ready to begin</p>"
+    }
+}

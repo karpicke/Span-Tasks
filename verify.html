@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mdb.css">
+    <link rel="stylesheet" href="css/jspsych.css">
+    <link rel="stylesheet" href="css/pcllab-plugins.css">
+
+    <title>Lab Verify</title>
+</head>
+
+<body>
+    <div id="experiment_container" class="container-fluid">
+        <h2 class="pcllab-text-center pcllab-default-bottom-margin-medium">Verify</h2>
+        <h4 class="pcllab-text-center pcllab-default-bottom-margin-medium">Make sure that the subject information is
+            correct.
+            <br>If not, click "Back" and re-enter the information.</h4>
+
+        <div id="data" class="pcllab-container-center pcllab-default-bottom-margin-medium">
+            <div class="row justify-content-center">
+                <div class="card p-0 w-75">
+                    <table class="table table-striped">
+                        <thead class="bg-primary indigo white-text">
+                            <tr>
+                                <th class="text-left">Parameter</th>
+                                <th class="text-left">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-body">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="pcllab-container-center">
+            <button id="backBtn" type="submit" class="btn btn-info btn-lg">Back</button>
+            <button id="continueBtn" type="submit" class="btn btn-primary btn-lg"
+                style="margin-right:15px;">Next</button>
+        </div>
+
+    </div>
+
+    <!-- SCRIPTS -->
+    <!-- jQuery first, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.2/js/mdb.min.js"></script>
+
+    <script src="jspsych.js"></script>
+
+
+    <script>
+        // Change this per experiment
+        // <urlParam>: <label>
+        const urlParams = {
+            "workerId": "Subject Number",
+            "session": "Session",
+            // "cbOrder": "Counterbalancing Order",
+            // "condition": "Condition"
+        }
+
+        function capitalize(string) {
+            words = string.split('-')
+            words.forEach((word, index) => {
+                words[index] = word.charAt(0).toUpperCase() + word.substr(1)
+            })
+            return words.join(" ")
+        }
+
+        let url = "experiment.html?"
+        const $tbody = $('#table-body')
+        for (const urlParam in urlParams) {
+            const $tr = $('<tr>')
+            $tr.appendTo($tbody)
+
+            const urlValue = jsPsych.data.getURLVariable(urlParam)
+            $tr.append($('<td>', { class: 'text-left', text: urlParams[urlParam] }))
+            $tr.append($('<td>', { class: 'text-left', text: urlValue }))
+
+            url += `&${urlParam}=${encodeURIComponent(urlValue)}`
+        }
+
+        $('#continueBtn').click(function () {
+            window.location.href = url
+        })
+
+        $('#backBtn').click(function () {
+            window.location.href = "lab-start.html";
+        })
+    </script>
+
+</body>
+
+</html>

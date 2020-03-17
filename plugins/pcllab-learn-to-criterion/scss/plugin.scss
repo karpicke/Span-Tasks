@@ -1,0 +1,84 @@
+.recall-list-container {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 500px;
+    overflow-y: auto;
+    box-shadow: 0 0.5rem 2rem rgba( #000, .11);
+}
+
+.recall-list-item {
+    display: flex;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    &:nth-child(odd) {
+        background-color: #F5F5F5;
+    }
+    span {
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 20px;
+    }
+}
+
+/**
+ * Progress Bar
+ *
+ * https://stackoverflow.com/questions/31109581/javascript-timer-progress-bar
+ * https://codepen.io/holdencreative/pen/vEVbwv
+ */
+
+$progress-color: #2196F3;
+.progress {
+    position: relative;
+    height: 5px;
+    display: block;
+    width: 100%;
+    background-color: lighten($color: $progress-color, $amount: 25%);
+    border-radius: 2px;
+    background-clip: padding-box;
+    margin: 0.5rem 0 1rem 0;
+    overflow: hidden;
+    .determinate {
+        position: absolute;
+        background-color: inherit;
+        top: 0;
+        bottom: 0;
+        background-color: $progress-color;
+        animation: progressbar-countdown;
+        /* Placeholder, this will be updated using javascript */
+        animation-duration: 40s;
+        /* We stop in the end */
+        animation-iteration-count: 1;
+        /* Stay on pause when the animation is finished finished */
+        animation-fill-mode: forwards;
+        /* We start paused, we start the animation using javascript */
+        animation-play-state: paused;
+        /* We want a linear animation, ease-out is standard */
+		animation-timing-function: linear;
+		
+		&.reverse {
+			animation: progressbar-countdown-reverse;
+		}
+    }
+}
+
+@keyframes progressbar-countdown {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes progressbar-countdown-reverse {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 0%;
+    }
+}

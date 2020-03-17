@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-6">
+            <h2 class="text-center mb-3">Demographics Information</h2>
+            <div class="card p-3">
+                <form onsubmit="event.preventDefault()" data-toggle="validator" class="md-form">
+                    <div class="form-group">
+                        <h4>What is your age?</h4>
+                        <input id="age_demo" type="number" class="form-control" placeholder="e.g. 25" required>
+                    </div>
+
+                    <div class="form-group">
+                        <h4>What is your gender?</h4>
+                        <input id="gender_demo" type="text" class="form-control" placeholder="e.g. female" required>
+                    </div>
+
+                    <h4>Is English your first language?</h4>
+                    <div class="md-radio md-radio-inline" style="font-size: larger;">
+
+                        <input type="radio" id="rb1" name="english_demo" value="english" checked>
+                        <label for="rb1" class="radio-inline">&nbsp;Yes</label>&nbsp;&nbsp;&nbsp;
+
+                        <input type="radio" id="rb2" name="english_demo" value="other">
+                        <label for="rb2" class="radio-inline">&nbsp;No</label>
+
+                    </div>
+                    <div id="language_opt_form" class="form-group" style="display: none">
+                        <h5 id="language_opt_header">What is your first language?</h5>
+                        <input id="language_opt" type="text" class="form-control" placeholder="e.g. Swahili" disabled required>
+                    </div>
+                    <input type="checkbox" id="accept_terms" name="accept_terms" value="0" tabindex="-1" autocomplete="off">
+
+                    <button type="submit" id="continue_btn" class="btn btn-primary btn-lg waves-effect pcllab-button-center">Continue</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

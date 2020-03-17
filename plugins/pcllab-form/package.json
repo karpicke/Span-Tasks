@@ -1,0 +1,13 @@
+{
+  "name": "pcllab-form",
+  "version": "1.0.0",
+  "main": "plugin.js",
+  "scripts": {
+    "watch": "watchify src/*.js -v -o plugin.dev.js",
+    "build": "browserify src/*.js -o plugin.dev.js"
+  },
+  "devDependencies": {
+    "browserify": "^16.2.3",
+    "watchify": "^3.11.0"
+  }
+}

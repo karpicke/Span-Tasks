@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    <!-- MDBootstrap -->
+    <link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
+    <link rel="stylesheet" href="/css/mdb.css">
+
+    <link rel="stylesheet" href="../../../css/jspsych.css">
+    <link rel="stylesheet" href="../../../css/pcllab-plugins.css">
+
+    <title>pcllab-core-example</title>
+</head>
+
+<body>
+    <div id="experiment_container" class="container-fluid"></div>
+
+    <!-- SCRIPTS -->
+    <!-- jQuery first, then Bootstrap JS. -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.2/js/mdb.min.js"></script>
+
+    <!-- Then jsPsych -->
+    <script src="../../../jspsych.js"></script>
+
+    <!-- Plugins -->
+    <script src="../../../js/automatedScoring.js"></script>
+    <script src="../plugin.js"></script>
+</body>
+
+<script>
+    var trial = {
+        type: 'pcllab-core',
+        //stimuli: 'How are you'
+        title: "Cued Recall Panel Test",
+        stimuli: [
+            {
+                "response_panel_title": "Response Panel Header",
+                "cue": "This is a test cue",
+                "cue_panel_title": "Panel header",
+                "image": "https://www.webpagefx.com/blog/images/cdn.designinstruct.com/files/582-how-to-image-placeholders/generic-image-placeholder.png",
+                "image_panel_title": "Image Panel Header",
+                "cue_list": ["cue 1", "cue 2", "cue 3", "cue 4", "cue 5"],
+                "cue_list_panel_title": "Cue List Panel Header",
+                "text": "<p>Pulvinar dapibus platea urna sociis curae; maecenas praesent torquent. Ad sem Justo a praesent lorem sed ullamcorper pharetra dui netus maecenas. Congue quam. Sed Cubilia dis vivamus arcu per rhoncus litora euismod phasellus imperdiet. Convallis a class, scelerisque nullam venenatis condimentum id tincidunt sodales fusce felis. Non accumsan fermentum adipiscing consectetuer dignissim felis eleifend ut condimentum. Vulputate cubilia ad amet leo netus pellentesque viverra hendrerit porta hac. Lectus Eros turpis litora tellus. Nunc magna. Nisl, habitasse vivamus eget. Tempus justo mollis. Aptent a nunc dictumst quis cras.</p>",
+                "text_panel_title": "Text Panel Header"
+            }
+        ],
+        input_size: 'small',
+        response_box_align: 'left',
+        randomize: true,
+        isi_time: 0,
+        cue_count: 2,
+        minimum_time: 1000,
+        // maximum_time: 3000,
+        show_button: true,
+        show_progress: true,
+        progress_total_time: true,
+        show_i_dont_know: true,
+    };
+
+    const trial2 = {
+        type: 'pcllab-core',
+        //stimuli: 'How are you'
+        title: "core",
+        stimuli: () => {
+            return [
+                { cue: 'marco', target: 'polo' },
+                { cue: Math.random().toString(), target: Math.random().toString() }
+            ]
+        },
+        input_size: 'small', // small, large, medium, xlarge
+        isi_time: 50,
+        cue_count: 3,
+        show_button: true,
+        show_i_dont_know: true,
+        forced_response: true,
+    };
+
+    jsPsych.init({
+        display_element: $("div#experiment_container"),
+        timeline: [trial],
+        on_finish: function () {
+            jsPsych.data.displayData();
+        }
+    })
+
+</script>
+
+</html>

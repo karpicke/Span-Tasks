@@ -1,0 +1,13 @@
+{
+  "name": "pcllab-symmetry-span",
+  "version": "1.0.0",
+  "main": "plugin.js",
+  "scripts": {
+    "watch": "watchify src/*.js -v -o plugin.js",
+    "build": "browserify src/*.js -o plugin.js"
+  },
+  "devDependencies": {
+    "browserify": "^16.2.3",
+    "watchify": "^3.11.0"
+  }
+}

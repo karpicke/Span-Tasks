@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    <!-- MDBootstrap -->
+    <link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
+    <link rel="stylesheet" href="/css/mdb.css">
+
+    <link rel="stylesheet" href="../../../css/jspsych.css">
+    <link rel="stylesheet" href="../../../css/pcllab-plugins.css">
+
+    <title>pcllab-operation-span-example</title>
+</head>
+
+<body>
+    <div id="experiment_container" class="container-fluid"> </div>
+
+    <!-- SCRIPTS -->
+    <!-- jQuery first, then Bootstrap JS. -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+    <script src="/js/mdb.js"></script>
+
+    <!-- Then jsPsych -->
+    <script src="../../../jspsych.js"></script>
+
+    <!-- Plugins -->
+    <script src="../../../js/automatedScoring.js"></script>
+    <script src="../plugin.js"></script>
+</body>
+
+<script>
+    const trial1 = {
+        type: 'pcllab-operation-span',
+        cycles: 2,
+        list_length: [2, 2],
+        math_stimuli: [
+            ["(8x2)", "(4x2)", "(1x2)", "(8x3)", "(4x3)", "(1x3)", "(1x4)"],
+            ["-8", "+6", "+1", "-1", "+6", "+1", "+5"]
+        ],
+        letter_stimuli: ['R', 'F', 'Q', 'A', 'Z', 'R', 'M'],
+        isi: 250,
+        button_text: 'Continue',
+        math_label: 'When you have solved the math problem, click continue',
+        trial_feedback: true
+    }
+
+    jsPsych.init({
+        display_element: $("div#experiment_container"),
+        timeline: [trial1],
+        on_finish: function () {
+            jsPsych.data.displayData()
+        }
+    })
+
+</script>
+
+</html>

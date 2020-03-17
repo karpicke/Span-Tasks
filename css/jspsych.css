@@ -1,0 +1,54 @@
+/*
+ * CSS for jsPsych Framework.
+ *
+ * These styles are general styles regarding button, text font, size and other things that have general usage in
+ * most of the plugins.
+ * The styles for jsPsych default plugins and PCLLAB plugins are in their own css files and you should import them
+ * independently.
+ */
+
+
+/* fonts and type */
+
+p {
+    font-size: 18px;
+}
+
+.pcllab-button-center {
+    position: relative;
+    margin: 0 auto 15px;
+    display: block;
+}
+
+/* jsPsych progress bar */
+
+#jspsych-progressbar-container {
+  color: #777;
+  border-bottom: 2px solid #dedede;
+  background-color: #f3f3f3;
+  margin-bottom: 1em;
+  text-align: center;
+  padding: 10px 0px;
+  width:100%;
+}
+#jspsych-progressbar-container s {}
+#jspsych-progressbar-outer {
+  background-color: #dedede;
+  border-radius: 5px;
+  padding: 1px;
+  margin: 2px 5px;
+}
+#jspsych-progressbar-inner {
+  background-color: #aaa;
+  /* #3EB3D7; */
+  width: 0%;
+  height: 1em;
+  border-radius: 5px;
+}
+
+/* Progess Bar Animation is faster and linear for */
+.progress-bar {
+    -webkit-transition: width 0.1s linear;
+    -o-transition: width 0.1s linear;
+    transition: width 0.1s linear;
+}

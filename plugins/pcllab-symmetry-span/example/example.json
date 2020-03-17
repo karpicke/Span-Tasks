@@ -1,0 +1,38 @@
+{
+    "square_stimuli": [{
+        "cue": "matrix1.bmp",
+        "target_row": 1,
+        "target_col": 1
+    },
+    {
+        "cue": "matrix3.bmp",
+        "target_row": 1,
+        "target_col": 3
+    },
+    {
+        "cue": "matrix5.bmp",
+        "target_row": 2,
+        "target_col": 1
+    },
+    {
+        "cue": "matrix7.bmp",
+        "target_row": 2,
+        "target_col": 3
+    }],
+    "symmetry_stimuli": [{
+        "cue": "symm1.bmp",
+        "target": true
+    },
+    {
+        "cue": "symm3.bmp",
+        "target": true
+    },
+    {
+        "cue": "symm5.bmp",
+        "target": true
+    },
+    {
+        "cue": "symm29.bmp",
+        "target": false
+    }]
+}
